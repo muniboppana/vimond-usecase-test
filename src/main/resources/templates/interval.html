@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Interval Input</title>
+    <h1>Welcome to Interval Splitter</h1>
+    <p style= "color:palevioletred;">
+        Interval splitter program outputs the result of taking all the includes and “removing” the excludes </p>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Enter Data</h1>
+    <form action="#" th:action="@{/interval}" th:object="${interval}" method="post">
+     	<p>Include Intervals: <input type="text" th:field="*{includeIntervals}" /></p>
+        <p>Exclude Intervals: <input type="text" th:field="*{excludeIntervals}" /></p>
+     	<p><input type="submit" value="Submit"/> <input type="reset" value="Reset" /></p>
+     </form>
+    <p style = "color:darkred;">
+        Note :</br>The sets of intervals can be given in any order, and can be overlapping</br>
+        Intervals shall contain Integers only</br>
+        The numeric range(set) can be represented by '-' and intervals separated by delimiter ',' </p>
+     <a href="/">Home Page</a> 
+</body>
+</html>	 

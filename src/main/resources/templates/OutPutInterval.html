@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result of the given Intervals</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<p>
+	<h1>Result</h1>
+    <p>Include Intervals : <!--/*@thymesVar id="interval" type="com.vimond.interval.splitter.Models.Interval"*/-->
+    <!--/*@thymesVar id="includeIntervals" type="com.vimond.interval.splitter.Models.Interval"*/-->
+    <input type="text" th:field="${interval.includeIntervals}" readonly/></p>
+    <p>Exclude Intervals : <!--/*@thymesVar id="interval" type=""com.vimond.interval.splitter.Models.Interval""*/-->
+    <!--/*@thymesVar id="excludeIntervals" type="com.vimond.interval.splitter.Models.Interval"*/-->
+    <input type="text" th:field="${interval.excludeIntervals}" readonly/></p>
+    <input type="text" th:field="${interval.outputIntervals}" readonly/></p>
+	    
+    <a href="/interval">Submit another set of intervals</a></p>
+    <a href="/">Home page</a>
+</body>
+</html>
